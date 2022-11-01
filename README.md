@@ -1,4 +1,4 @@
-# TIS Microservice Template
+# TIS trainee notification generator
 
 ## About
 This is a template to be used for TIS microservices with the following
@@ -53,5 +53,5 @@ This project uses [Semantic Versioning](semver.org).
 This project is license under [The MIT License (MIT)](LICENSE).
 
 [task-definition]: .aws/task-definition.json
-[TemplateApplication]: src/main/java/uk/nhs/hee/tis/template/TemplateApplication.java
-[TemplateApplicationTest]: src/test/java/uk/nhs/hee/tis/template/TemplateApplicationTest.java
+[TemplateApplication]: src/main/java/uk/nhs/hee/tis/notification/TemplateApplication.java
+[TemplateApplicationTest]: src/test/java/uk/nhs/hee/tis/notification/TemplateApplicationTest.java

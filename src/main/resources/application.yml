@@ -1,9 +1,28 @@
 server:
   # TODO: Update server port and context path to a unique value.
-  port: 8080
+  port: 8099
   servlet:
-    context-path: /template
+    context-path: /notification
 
 sentry:
   dsn: ${SENTRY_DSN:}
   environment: ${SENTRY_ENVIRONMENT:}
+
+spring:
+  redis:
+    host: ${REDIS_HOST:localhost}
+    port: ${REDIS_PORT:6379}
+    ssl: ${REDIS_SSL:false}
+    user: ${REDIS_USER:default}
+    password: ${REDIS_PASSWORD:password}
+    timeout: 60000
+    database: 0
+    time-to-live: ${REDIS_DATA_TTL:2}
+    requests-cache:
+      database: 1
+      time-to-live: ${REDIS_REQUEST_TTL:4}
+
+application:
+  aws:
+    sqs:
+      notification: ${NOTIFICATION_QUEUE_URL:http://localhost:4566/000000000000/hackday-trainee-notifications}
